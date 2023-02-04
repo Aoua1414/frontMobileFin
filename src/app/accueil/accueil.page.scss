@@ -1,0 +1,54 @@
+// .fontt{
+//     background-color: white;
+// }
+.logo{
+   
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    padding-top: 8%;
+    margin-right: 8%;
+
+}
+h5{
+    text-align: center;
+    color: black;
+    margin-right: 8%;
+    margin-bottom: 15%;
+    
+    // border: 10px;
+    // border-color: #149B54;
+}
+h1{
+    text-align: center;
+    font-weight:bold;
+    color: black;
+    padding-bottom: 40px;
+    margin-top: 2%;
+    font-size: 200%;
+    margin-right: 8%;
+}
+.text-center{
+   margin-bottom: 10%;
+}
+
+ion-content{
+// --background:#FFF;
+background-color: #FFF;
+}
+ion-content{   
+    // ICI ON BLOCK LE SCROLLING    
+     --offset-bottom: auto!important;  
+        background: #F8F6FB;  
+         --overflow: hidden;  
+          overflow: auto; 
+            &::-webkit-scrollbar { 
+                  display: none;   } }
+
+                  ion-title{
+                    background-color: #FFF;
+                  }
+                  ion-toolbar{
+                    background-color: #FFF;
+                  }
+                  

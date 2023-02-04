@@ -1,0 +1,77 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Rdv</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<div class="cont">
+  <h4>VEUILLEZ REMPLIR TOUS LES CHAMPS </h4>
+  <img src="../assets/l.png" alt="" class="logo">
+
+
+  <ion-card class="car bg-white;" style="padding: 10%; background-color: white; margin-top: 1%;">
+
+
+    <div class="cont" style="margin-top: -8%;">
+
+<!-- <div *ngIf="erreur">
+  {{erreur}}
+</div> -->
+
+
+<!-- alert erreur ou succes popop -->
+
+<div *ngIf="erreur" class="alert alert-success" role="alert">
+  <strong>{{erreur}}</strong>
+</div>
+
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  <label class="item item-input item-stacked-label xs-12">
+    <span class="input-label">Service medical</span><br>
+    <input type="text" placeholder="Service medical" name="service_medical"
+    [(ngModel)]="form.service_medical"
+     required 
+     #service_medical="ngModel">
+  </label><br>
+  <br>
+
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
+    <span class="input-label">Motif du rendez-vous</span><br>
+    <input type="text" placeholder="Donnez le motif du rdv" name="motif"
+    [(ngModel)]="form.motif"
+    required
+    #motif="ngModel">
+  </label>
+<br>
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%; margin-left: 10%;">
+    <span class="input-label">Date du rendez-vous</span><br>
+    <input type="date" placeholder="Specifier la date" name="daterdv"
+    [(ngModel)]="form.daterdv"
+    required
+    #daterdv="ngModel">
+  </label>
+<br>
+  <label class="item item-input item-stacked-label mb-4" style="margin-top: -8%;">
+    <span class="input-label">Heure du rendez-vous</span><br>
+    <input type="time" placeholder="Specifier la date" style="margin-left: 20%;" name="heure"
+    [(ngModel)]="form.heure"
+    required
+    #heure="ngModel">
+  </label>
+  <div class="text-center" style="margin-bottom: 20%; margin-top: -5%;" >
+    <button type="submit" class="btn btn-success">Ajouter</button>
+  </div>
+  
+</form>
+</div>
+</ion-card>
+ 
+</div>
+
+
+
+<ion-content>
+
+</ion-content>

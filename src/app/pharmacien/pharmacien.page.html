@@ -1,0 +1,19 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Pharmacien</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+<h2>CONTACTS UTILES</h2>
+
+<img src="../assets/ph.png" alt="" class="li">
+
+
+<ion-card *ngFor="let tout of lespharms">
+  <h6>{{tout.nom_prenom}}</h6>
+  <h6>{{tout.numero}}</h6>
+  <H6>{{tout.adresse}}</H6>
+</ion-card>
+
+</ion-content>

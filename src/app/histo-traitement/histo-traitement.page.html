@@ -1,0 +1,39 @@
+ <ion-header style="background-color: white;">
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title>hito-traitement</ion-title> -->
+    <h4>TOUS MES TRAITEMENTS</h4>
+  <!-- </ion-toolbar> -->
+</ion-header> 
+
+<ion-content>
+  <div class="cardd">
+    <div class="fix">
+
+
+<div class="logo">
+  <img src="../assets/prise.png" alt="">
+</div>
+
+<div class="text-center" style="margin-left: 60%; padding-top: 2%;" >
+  <button class="btn btn-success" style="padding:2%; margin-bottom: 10%;" routerLink="/tabs/traitement">+ Traitement</button>
+</div>
+</div>
+<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let abasse of touttraitememt">
+  <ion-card-header >
+    <ion-card-title style="color: black;" >{{abasse.nom_medoc}}</ion-card-title>
+   
+    <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
+  </ion-card-header>
+
+  <ion-card-content style="color: black;" >
+    <h3>{{abasse.date_debut}}</h3>
+    <h3>{{abasse.date_fin}}</h3>
+<br>
+    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
+    <ion-icon name="create-outline"></ion-icon>
+
+  </ion-card-content>
+</ion-card>
+
+</div>
+</ion-content>

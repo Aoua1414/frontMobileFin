@@ -1,0 +1,57 @@
+<ion-header style="background-color:white;">
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title>historique</ion-title> -->
+    <h4>TOUS MES RENDEZ-VOUS</h4>
+  <!-- </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">modifier</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="cardd">
+
+
+<div class="logo">
+  <img src="../assets/slt.png" alt="">
+</div>
+
+<div class="text-center" style="margin-left: 60%; padding-top: 2%;" >
+  <button class="btn btn-success" style="padding: 2%;" routerLink="/tabs/rdv">+ Rendez-vous</button>
+</div>
+
+<ion-card style="background-color: white; border-color: black; border: 5px;" *ngFor="let tout of toutrdv">
+  <ion-card-header >
+    <ion-card-title style=" color: black;">{{tout.service_medical}}</ion-card-title>
+   
+    <!-- <ion-card-subtitle>Motif</ion-card-subtitle> -->
+  </ion-card-header>
+
+  <ion-card-content style="color: black;">
+    <h3>{{tout.motif}}</h3>
+    <h3>{{tout.date}}</h3>
+<br>
+    <ion-icon style="color: red;" name="trash-outline"></ion-icon>
+    <ion-icon name="create-outline" [routerLink]="['modif-rdv', tout.id_rdv]"></ion-icon>
+
+  </ion-card-content>
+</ion-card>
+</div>
+</ion-content>
